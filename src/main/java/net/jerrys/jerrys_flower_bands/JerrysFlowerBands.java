@@ -4,14 +4,12 @@ import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
 
+import net.jerrys.jerrys_flower_bands.item.ModCreativeModTabs;
 import net.jerrys.jerrys_flower_bands.item.ModItems;
 import net.minecraft.client.Minecraft;
-import net.minecraft.world.item.CreativeModeTabs;
-import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
 import net.minecraftforge.event.server.ServerStartingEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -21,7 +19,6 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.ForgeRegistries;
-import net.minecraftforge.registries.RegistryObject;
 
 // The value here should match an entry in the META-INF/mods.toml file
 @Mod(JerrysFlowerBands.MOD_ID)
@@ -32,14 +29,13 @@ public class JerrysFlowerBands {
     public JerrysFlowerBands(FMLJavaModLoadingContext context) {
         IEventBus modEventBus = context.getModEventBus();
 
+        ModCreativeModTabs.register(modEventBus);
+
         ModItems.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 
         MinecraftForge.EVENT_BUS.register(this);
-
-        // Register the item to a creative tab
-        modEventBus.addListener(this::addCreative);
 
         // Register our mod's ForgeConfigSpec so that Forge can create and load the
         // config file for us
@@ -56,17 +52,6 @@ public class JerrysFlowerBands {
         LOGGER.info(Config.magicNumberIntroduction + Config.magicNumber);
 
         Config.items.forEach((item) -> LOGGER.info("ITEM >> {}", item.toString()));
-    }
-
-    // Add the example block item to the building blocks tab
-    private void addCreative(BuildCreativeModeTabContentsEvent event) {
-        if (event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
-            // Get all RegistryObject fields from ModItems
-            for (RegistryObject<Item> itemRegistryObject : ModItems.ITEMS.getEntries()) {
-                // Accept the item in the event
-                event.accept(itemRegistryObject.get());
-            }
-        }
     }
 
     @SubscribeEvent
