@@ -5,7 +5,6 @@ import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.ArmorMaterial;
-import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
 
 import java.util.function.Supplier;
@@ -14,17 +13,17 @@ import java.util.function.Supplier;
 
 public enum FlowerBandMaterials implements ArmorMaterial {
     BLOOM("bloom", 26, new int[] { 0, 0, 0, 0 }, 0,
-            SoundEvents.ARMOR_EQUIP_GOLD, 0f, 0f, () -> Ingredient.of(Items.OXEYE_DAISY)),
+            SoundEvents.ARMOR_EQUIP_GOLD, 0f, 0f, null),
     BLUSH("blush", 26, new int[] { 0, 0, 0, 0 }, 0,
-            SoundEvents.ARMOR_EQUIP_GOLD, 0f, 0f, () -> Ingredient.of(Items.OXEYE_DAISY)),
+            SoundEvents.ARMOR_EQUIP_GOLD, 0f, 0f, null),
     DAISY("daisy", 26, new int[] { 0, 0, 0, 0 }, 0,
-            SoundEvents.ARMOR_EQUIP_GOLD, 0f, 0f, () -> Ingredient.of(Items.OXEYE_DAISY)),
+            SoundEvents.ARMOR_EQUIP_GOLD, 0f, 0f, null),
     DANDELION("dandelion", 26, new int[] { 0, 0, 0, 0 }, 0,
-            SoundEvents.ARMOR_EQUIP_GOLD, 0f, 0f, () -> Ingredient.of(Items.DANDELION)),
+            SoundEvents.ARMOR_EQUIP_GOLD, 0f, 0f, null),
     PINK_PETALS("pink_petals", 26, new int[] { 0, 0, 0, 0 }, 0,
-            SoundEvents.ARMOR_EQUIP_GOLD, 0f, 0f, () -> Ingredient.of(Items.PINK_PETALS)),
+            SoundEvents.ARMOR_EQUIP_GOLD, 0f, 0f, null),
     SUNFIRE("sunfire", 26, new int[] { 0, 0, 0, 0 }, 0,
-            SoundEvents.ARMOR_EQUIP_GOLD, 0f, 0f, () -> Ingredient.of(Items.PINK_PETALS));
+            SoundEvents.ARMOR_EQUIP_GOLD, 0f, 0f, null);
 
     private final String name;
     private final int durabilityMultiplier;
