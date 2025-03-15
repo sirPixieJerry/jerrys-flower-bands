@@ -17,8 +17,6 @@ public enum FlowerBandMaterials implements ArmorMaterial {
             SoundEvents.ARMOR_EQUIP_GOLD, 0f, 0f, () -> Ingredient.of(Items.OXEYE_DAISY)),
     DANDELION("dandelion", 26, new int[] { 0, 0, 0, 0 }, 0,
             SoundEvents.ARMOR_EQUIP_GOLD, 0f, 0f, () -> Ingredient.of(Items.DANDELION)),
-    POPPY("poppy", 26, new int[] { 0, 0, 0, 0 }, 0,
-            SoundEvents.ARMOR_EQUIP_GOLD, 0f, 0f, () -> Ingredient.of(Items.POPPY)),
     PINK_PETALS("pink_petals", 26, new int[] { 0, 0, 0, 0 }, 0,
             SoundEvents.ARMOR_EQUIP_GOLD, 0f, 0f, () -> Ingredient.of(Items.PINK_PETALS));
 
