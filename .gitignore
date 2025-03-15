@@ -1,0 +1,32 @@
+# Gradle caches and logs
+.gradle/
+!gradle/wrapper/gradle-wrapper.jar # Keep the Gradle wrapper jar in version control
+
+# Build output
+/build/
+run/
+run-data/
+
+# IDE-specific files
+.vscode/
+.idea/
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Java compiled files
+*.class
+*.jar
+*.war
+*.ear
+
+# Miscellaneous
+*.iml
+*.ipr
+*.iws
+out/
+.nvmrc
