@@ -13,17 +13,17 @@ import java.util.function.Supplier;
 
 public enum FlowerBandMaterials implements ArmorMaterial {
     BLOOM("bloom", 26, new int[] { 0, 0, 0, 0 }, 0,
-            SoundEvents.ARMOR_EQUIP_GOLD, 0f, 0f, null),
+            SoundEvents.ARMOR_EQUIP_GOLD, 0f, 0f, () -> Ingredient.EMPTY),
     BLUSH("blush", 26, new int[] { 0, 0, 0, 0 }, 0,
-            SoundEvents.ARMOR_EQUIP_GOLD, 0f, 0f, null),
+            SoundEvents.ARMOR_EQUIP_GOLD, 0f, 0f, () -> Ingredient.EMPTY),
     DAISY("daisy", 26, new int[] { 0, 0, 0, 0 }, 0,
-            SoundEvents.ARMOR_EQUIP_GOLD, 0f, 0f, null),
+            SoundEvents.ARMOR_EQUIP_GOLD, 0f, 0f, () -> Ingredient.EMPTY),
     DANDELION("dandelion", 26, new int[] { 0, 0, 0, 0 }, 0,
-            SoundEvents.ARMOR_EQUIP_GOLD, 0f, 0f, null),
+            SoundEvents.ARMOR_EQUIP_GOLD, 0f, 0f, () -> Ingredient.EMPTY),
     PINK_PETALS("pink_petals", 26, new int[] { 0, 0, 0, 0 }, 0,
-            SoundEvents.ARMOR_EQUIP_GOLD, 0f, 0f, null),
+            SoundEvents.ARMOR_EQUIP_GOLD, 0f, 0f, () -> Ingredient.EMPTY),
     SUNFIRE("sunfire", 26, new int[] { 0, 0, 0, 0 }, 0,
-            SoundEvents.ARMOR_EQUIP_GOLD, 0f, 0f, null);
+            SoundEvents.ARMOR_EQUIP_GOLD, 0f, 0f, () -> Ingredient.EMPTY);
 
     private final String name;
     private final int durabilityMultiplier;
