@@ -1,0 +1,18 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "category": "misc",
+    "pattern": [
+        "###",
+        "# #",
+        "###"
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:dandelion"
+        }
+    },
+    "result": {
+        "item": "jerrys_flower_bands:dandelion_flower_band",
+        "count": 1
+    }
+}
