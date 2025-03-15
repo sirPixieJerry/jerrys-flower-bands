@@ -9,6 +9,11 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
 public class ModItems {
+        // Private constructor to prevent instantiation
+        private ModItems() {
+                throw new UnsupportedOperationException("This is a utility class and cannot be instantiated");
+        }
+
         public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS,
                         JerrysFlowerBands.MOD_ID);
 
