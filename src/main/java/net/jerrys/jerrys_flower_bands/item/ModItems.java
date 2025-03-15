@@ -28,6 +28,8 @@ public class ModItems {
                         () -> new ArmorItem(FlowerBandMaterials.DANDELION, ArmorItem.Type.HELMET, new Properties()));
         public static final RegistryObject<Item> PINK_PETALS_FLOWER_BAND = ITEMS.register("pink_petals_flower_band",
                         () -> new ArmorItem(FlowerBandMaterials.PINK_PETALS, ArmorItem.Type.HELMET, new Properties()));
+        public static final RegistryObject<Item> SUNFIRE_FLOWER_BAND = ITEMS.register("sunfire_flower_band",
+                        () -> new ArmorItem(FlowerBandMaterials.SUNFIRE, ArmorItem.Type.HELMET, new Properties()));
 
         public static void register(IEventBus eventBus) {
                 ITEMS.register(eventBus);
