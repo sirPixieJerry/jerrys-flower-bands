@@ -1,0 +1,6 @@
+{
+    "parent": "item/generated",
+    "textures": {
+        "layer0": "jerrys_flower_bands:item/daisy_flower_band"
+    }
+}
