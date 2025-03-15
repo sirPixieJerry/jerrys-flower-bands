@@ -13,6 +13,8 @@ import java.util.function.Supplier;
 @SuppressWarnings("java:S107")
 
 public enum FlowerBandMaterials implements ArmorMaterial {
+    BLUSH("blush", 26, new int[] { 0, 0, 0, 0 }, 0,
+            SoundEvents.ARMOR_EQUIP_GOLD, 0f, 0f, () -> Ingredient.of(Items.OXEYE_DAISY)),
     DAISY("daisy", 26, new int[] { 0, 0, 0, 0 }, 0,
             SoundEvents.ARMOR_EQUIP_GOLD, 0f, 0f, () -> Ingredient.of(Items.OXEYE_DAISY)),
     DANDELION("dandelion", 26, new int[] { 0, 0, 0, 0 }, 0,

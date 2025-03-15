@@ -18,6 +18,8 @@ public class ModItems {
         public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS,
                         JerrysFlowerBands.MOD_ID);
 
+        public static final RegistryObject<Item> BLUSH_FLOWER_BAND = ITEMS.register("blush_flower_band",
+                        () -> new ArmorItem(FlowerBandMaterials.BLUSH, ArmorItem.Type.HELMET, new Properties()));
         public static final RegistryObject<Item> DAISY_FLOWER_BAND = ITEMS.register("daisy_flower_band",
                         () -> new ArmorItem(FlowerBandMaterials.DAISY, ArmorItem.Type.HELMET, new Properties()));
         public static final RegistryObject<Item> DANDELION_FLOWER_BAND = ITEMS.register("dandelion_flower_band",

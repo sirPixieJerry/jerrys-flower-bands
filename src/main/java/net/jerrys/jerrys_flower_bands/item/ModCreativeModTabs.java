@@ -22,7 +22,7 @@ public class ModCreativeModTabs {
     public static final RegistryObject<CreativeModeTab> JERRYS_FLOWER_BANDS_TAB = CREATIVE_MODE_TABS.register(
             "jerrys_flower_bands_tab",
             () -> CreativeModeTab.builder()
-                    .icon(() -> new ItemStack(ModItems.POPPY_FLOWER_BAND.get()))
+                    .icon(() -> new ItemStack(ModItems.BLUSH_FLOWER_BAND.get()))
                     .title(Component.translatable("creativetab.jerrys_flower_bands_tab"))
                     .displayItems((pParameters, pOutput) -> {
                         for (RegistryObject<Item> itemRegistryObject : ModItems.ITEMS.getEntries()) {

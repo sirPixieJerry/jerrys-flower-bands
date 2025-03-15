@@ -1,0 +1,21 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "category": "misc",
+    "pattern": [
+        "#+#",
+        "+ +",
+        "#+#"
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:oxeye_daisy"
+        },
+        "+": {
+            "item": "minecraft:pink_petals"
+        }
+    },
+    "result": {
+        "item": "jerrys_flower_bands:blush_flower_band",
+        "count": 1
+    }
+}
