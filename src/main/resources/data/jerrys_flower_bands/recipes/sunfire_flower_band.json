@@ -1,0 +1,27 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "category": "misc",
+    "pattern": [
+        "#+*",
+        "x x",
+        "*+#"
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:oxeye_daisy"
+        },
+        "+": {
+            "item": "minecraft:pink_petals"
+        },
+        "x": {
+            "item": "minecraft:dandelion"
+        },
+        "*": {
+            "item": "minecraft:poppy"
+        }
+    },
+    "result": {
+        "item": "jerrys_flower_bands:sunfire_flower_band",
+        "count": 1
+    }
+}

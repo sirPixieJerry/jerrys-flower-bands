@@ -11,27 +11,31 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.RegistryObject;
 
 public class ModCreativeModTabs {
-    // Private constructor to prevent instantiation
-    private ModCreativeModTabs() {
-        throw new UnsupportedOperationException("This is a utility class and cannot be instantiated");
-    }
+  // Private constructor to prevent instantiation
+  private ModCreativeModTabs() {
+    throw new UnsupportedOperationException("This is a utility class and cannot be instantiated");
+  }
 
-    public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS = DeferredRegister
-            .create(Registries.CREATIVE_MODE_TAB, JerrysFlowerBands.MOD_ID);
+  public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS =
+      DeferredRegister.create(Registries.CREATIVE_MODE_TAB, JerrysFlowerBands.MOD_ID);
 
-    public static final RegistryObject<CreativeModeTab> JERRYS_FLOWER_BANDS_TAB = CREATIVE_MODE_TABS.register(
-            "jerrys_flower_bands_tab",
-            () -> CreativeModeTab.builder()
-                    .icon(() -> new ItemStack(ModItems.POPPY_FLOWER_BAND.get()))
-                    .title(Component.translatable("creativetab.jerrys_flower_bands_tab"))
-                    .displayItems((pParameters, pOutput) -> {
-                        for (RegistryObject<Item> itemRegistryObject : ModItems.ITEMS.getEntries()) {
-                            pOutput.accept(itemRegistryObject.get());
+  public static final RegistryObject<CreativeModeTab> JERRYS_FLOWER_BANDS_TAB =
+      CREATIVE_MODE_TABS.register(
+          "jerrys_flower_bands_tab",
+          () ->
+              CreativeModeTab.builder()
+                  .icon(() -> new ItemStack(ModItems.BLUSH_FLOWER_BAND.get()))
+                  .title(Component.translatable("creativetab.jerrys_flower_bands_tab"))
+                  .displayItems(
+                      (pParameters, pOutput) -> {
+                        for (RegistryObject<Item> itemRegistryObject :
+                            ModItems.ITEMS.getEntries()) {
+                          pOutput.accept(itemRegistryObject.get());
                         }
-                    })
-                    .build());
+                      })
+                  .build());
 
-    public static void register(IEventBus eventBus) {
-        CREATIVE_MODE_TABS.register(eventBus);
-    }
+  public static void register(IEventBus eventBus) {
+    CREATIVE_MODE_TABS.register(eventBus);
+  }
 }
